@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-radius: 5px;
+        }
+        th {
+            height: 70px;
+            background-color: rgb(233, 231, 231);
+        }
+        label {
+            color: rgb(42, 194, 153);
+            font-weight: bold;
+        }
+        td {
+            padding: 12px 12px;
+        }
+        input[type=text],input[type=email],input[type=password],input[type=number], textarea, select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type=submit], input[type=button] {
+            background-color: rgb(42, 194, 153);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        input[type=button] {
+            padding: 5px 5px !important;
+        }
+        tbody {
+            box-shadow: 1px 1px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="#">
+            <table>
+                <th colspan="2">Create Account</th>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="fname">First Name*</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Enter your first name" required>
+                    </td>
+                    <td>
+                        <label for="lname">Last Name*</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Enter your last name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="pwd">Password*</label>
+                        <input type="password" id="pwd" name="pwd" placeholder="Enter your password" required>
+                    </td>
+                    <td>
+                        <label for="cnf-pwd">Confirm Password*</label>
+                        <input type="password" id="cnf-pwd" name="cnf-pwd" placeholder="Enter your password again" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="gender">Gender:</label><br>
+                        <input type="radio" id="male" name="gender" value="male">Male
+                        <input type="radio" id="female" name="gender" value="female">Female
+                    </td>
+                    <td>
+                        <label for="hobbies">Hobbies</label><br>
+                        <input type="checkbox" id="music" name="hobbies" value="music">Music
+                        <input type="checkbox" id="sports" name="hobbies" value="sports">Sports
+                        <input type="checkbox" id="travel" name="hobbies" value="travel">Travel
+                        <input type="checkbox" id="movies" name="hobbies" value="movies">Movies
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="income-source">Source of Income</label><br>
+                        <select name="income-source" id="income-source">
+                            <option value="employed">Employed</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="income">Income</label><br>
+                        <input type="range" name="income" id="income" min="20000" max="90000">
+                        <input type="button" value="20K">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="profile">Upload Profile Picture</label><br>
+                        <input type="file" id="profile">
+                    </td>
+                    <td>
+                        <label for="age">Age</label><br>
+                        <input type="number" id="age">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="bio">Bio</label><br>
+                        <textarea name="bio" id="bio"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+                <tr>
+                    <td colspan="2" style="background-color: rgb(233, 231, 231);">
+                        <div style="margin-left: 92%;">
+                            <input type="submit" value="Create">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
