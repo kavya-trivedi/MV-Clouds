@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .form-container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            width: 40%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        input[type=text], input[type=email], textarea, select {
+            width: 100%;
+            background-color: #ccc;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type=submit] {
+            width: 100%;
+            background-color: cornflowerblue;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            color: aliceblue;
+        }
+        span {
+            display: inline;
+        }
+        .bullet {
+            width: 30px;
+            height: 30px;
+            background-color: cornflowerblue;
+            display:inline-block;
+            margin-right:10px;
+            text-align: center;
+            color: aliceblue;
+            border-radius: 15px 15px 15px 0px;
+        }
+        h3 {
+            display:inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="">
+            <span>
+                <div class="bullet">1</div>
+                <h3>Candidate Info</h3>
+            </span>
+            <input type="text" id="fname" name="firstname" placeholder="Your Name *" required>
+            <input type="email" id="email" name="email" placeholder="Your Email *" required>
+            <textarea name="about" id="about" placeholder="About yourself"></textarea>
+            <h5>Interests:</h5>
+            <select name="interests" id="interests">
+                <option value="fishkeeping">Fishkeeping</option>
+            </select>
+            <span>
+                <div class="bullet">2</div>
+                <h3>Additional Info</h3>
+            </span>
+            <textarea name="aboutSchool" id="aboutSchool" placeholder="About Your School"></textarea>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>
