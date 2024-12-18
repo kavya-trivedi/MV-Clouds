@@ -1,0 +1,25 @@
+<!-- "Write a function that mimics (without the use of >>) the right shift operator and returns the result from the two given integers.
+Ex. 80 >> 3 = floor(80/2^3) = floor(80/8) = 10
+    -24 >> 2 = floor(-24/2^2) = floor(-24/4) = -6" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function shiftRight(num, shift) {
+            divisor = Math.pow(2, shift)
+            return Math.floor(num/divisor)
+        }
+        const num = prompt("Enter number")
+        const shift = prompt("Enter number of shifts")
+        if(num!=null && shift!=null) {
+            document.write(shiftRight(num, shift))
+        }
+    </script>
+</body>
+</html>

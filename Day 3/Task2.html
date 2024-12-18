@@ -1,0 +1,24 @@
+<!-- "Javascript program that will return an integer number corresponding to the amount of digits in the given integer num. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function noOfDigits(num) {
+            digits = 0
+            while(num>0) {
+                num = Math.floor(num/10)
+                digits += 1
+            }
+            return digits
+        }
+        const userInput = prompt('Enter a number')
+        document.write(noOfDigits(userInput))
+    </script>
+</body>
+</html>

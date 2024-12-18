@@ -1,0 +1,19 @@
+<!-- Sort the given string based on ASCII value. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sortString(string) {
+            return string.split('').sort().join('')
+        }
+        const userInput = prompt('Enter a string')
+        document.write(sortString(userInput))
+    </script>
+</body>
+</html>

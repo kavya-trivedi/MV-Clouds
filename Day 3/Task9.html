@@ -1,0 +1,30 @@
+<!-- "Create a function that moves all capital letters to the front of a word.
+Ex. ""hApPy"" ➞  APhpy""" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function capToFront(word) {
+            char = word.split("")
+            caps = []
+            lower = []
+            for (i = 0; i < char.length; i++) {
+                if(char[i]==char[i].toUpperCase()) {
+                    caps.push(char[i])
+                } else {
+                    lower.push(char[i])
+                }
+            }
+            return caps.join("").concat(lower.join(""))
+        }
+        const userInput = prompt("Enter a word")
+        document.write(capToFront(userInput))
+    </script>
+</body>
+</html>

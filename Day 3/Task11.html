@@ -1,0 +1,40 @@
+<!-- "Create a function that takes two or more numbers as user input and adds them together to get a new number. The function then repeatedly multiplies the digits of the new number by each other, giving a new number, until the product is returned only 1 digit long. Return the final value.
+EX. User input - ""16 28"" then -- 16 + 28 = 44 after this it will add digits like this --4 * 4 = 16 until it gets only single digit as value-- 1 * 6 = 6" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function func(string) {
+            numbers = string.split(" ")
+            total = numbers.length
+            sum = 0
+            for (i = 0; i < numbers.length; i++) {
+                sum += Number(numbers[i])
+            }
+            if (sum > 9) {
+                temp = sum
+                while (true) {
+                    mul = 1
+                    while (temp > 0) {
+                        mul *= temp%10
+                        temp = Math.floor(temp/10)
+                    }
+                    if (mul <= 9) { break }
+                    temp = mul
+                }
+            } else {
+                return sum
+            }
+            return mul
+        }
+        const userInput = prompt('Enter two or more numbers')
+        document.write(func(userInput))
+    </script>
+</body>
+</html>

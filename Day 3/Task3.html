@@ -1,0 +1,26 @@
+<!-- Write a javascript program that returns `true` if the input string includes the string "ee". -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findSubstring(string) {
+            if(string.includes("ee")) {
+                return true
+            }
+            return false
+        }
+        const userInput = prompt('Enter a word')
+        if(findSubstring(userInput)) {
+            document.write('TRUE')
+        } else {
+            document.write('FALSE')
+        }
+    </script>
+</body>
+</html>

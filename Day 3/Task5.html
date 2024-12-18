@@ -1,0 +1,27 @@
+<!-- "Write a JavaScript function that takes a two-digit number and determines if it's the largest of two possible digit swaps -->
+<!-- Ex:- If we give 43 as user input then it will return false because swapping 43 gives us 34, and 43 > 34." -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const number = prompt('Enter a number')
+        if(number!=null && (number>9 && number<100)) {
+            temp = number
+            unit = temp%10
+            tens = Math.floor(temp/10)
+            swapped_number = unit*10 + tens
+            if (number > swapped_number) {
+                document.write("False")
+            } else {
+                document.write("True")
+            }
+        }
+    </script>
+</body>
+</html>
