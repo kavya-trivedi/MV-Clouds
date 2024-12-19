@@ -1,0 +1,27 @@
+<!-- Create a separate group for consecutive ascending numbers from the given string. ex: 1235689.  Output : 123 56 89 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function separateConsecutive(string) {
+            numbers = string.split('').sort().map(Number)
+            output = ""
+            for(i = 0; i < numbers.length; i++) {
+                output += numbers[i]
+                if (numbers[i] + 1 != numbers[i + 1]) {
+                    output += " "
+                }
+            }
+            document.write("Input:", string, "<br>Output:", output)
+        }
+        const userInput = prompt('Enter a string of numbers')
+        separateConsecutive(userInput)
+    </script>
+</body>
+</html>

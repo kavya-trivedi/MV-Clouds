@@ -1,0 +1,41 @@
+<!-- Create a page with a single background image occupying the entire window. Over the image, there should be a 3X3 grid that fills the entire window. Each grid cell should have a circular opaque shape. No space between grid cells. When hovering the mouse cursor over the grid cell, it should change its opacity to 0. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(background.jpg);
+            background-size: cover;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+        .container > div {
+            background-color: #f1f1f1;
+            padding: 22%;
+            border-radius: 50%;
+        }
+        .container > div:hover {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div></div>
+        <div></div>
+        <div></div>  
+        <div></div>
+        <div></div>
+        <div></div>  
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+</body>
+</html>

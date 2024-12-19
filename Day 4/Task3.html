@@ -1,0 +1,25 @@
+<!-- Create a program which will display the time remaining from the current date to the entered date. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function remainingTime(userInput) {
+            const currentDate = new Date();
+
+            let enteredDate = new Date(userInput);
+            diffDays = currentDate.getDate() - enteredDate.getDate();
+            diffMonths = currentDate.getMonth() - enteredDate.getMonth();
+            diffYears = currentDate.getFullYear() - enteredDate.getFullYear();
+            document.write(diffYears, " years ", diffMonths, " months ", diffDays, " days")
+        }
+        const userInput = prompt('Enter date in mm-dd-yyyy format')
+        remainingTime(userInput)
+    </script>
+</body>
+</html>
